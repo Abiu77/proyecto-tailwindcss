@@ -1,13 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind CSS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <style>
+        body{
+            padding: 50px 25%;
+        }
+        .panel{
+            border: solid 1px blue;
+        }
+        .panel-title{
+            background-color: blue;
+            color: #fff;
+            padding: 1.25rem 1rem 1.25rem 1rem;
+        }
+        .panel-body{
+            padding: 1.25rem 1rem 1.25rem 1rem;
+        }
+        .panel-body p{
+            line-height: 1.75;
+        }
+    </style>
 </head>
 <body>
-    <H1 class="text-3xl">Hola Tailwind</H1>
-    <button>Haz click</button>
+    <div class="panel">
+        <div class="panel-title">
+            Inicio
+        </div>
+        <div class="panel-body">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eum quos est fuga eius ipsam at libero laborum necessitatibus distinctio, possimus nihil debitis adipisci corporis veritatis.
+            </p>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="border border-blue-700">
+        <div class="bg-blue-700 text-white pt-5 pb-5 pl-4">
+            Inicio
+        </div>
+        <div>
+            <p class="pl-4 pt-5 pr-4 pb-4 leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eum quos est fuga eius ipsam at libero laborum necessitatibus distinctio, possimus nihil debitis adipisci corporis veritatis.
+            </p>
+        </div>
+    </div>
 </body>
 </html>
