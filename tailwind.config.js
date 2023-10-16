@@ -8,6 +8,10 @@ module.exports = {
     extend: {
       spacing:{
         'quarter':'25%'
+      },
+      fontFamily:{
+        'sans' : "'Work Sans', sans-serif",
+        'cascadia': '"CascadiaCode"',
       }
     },
   },
