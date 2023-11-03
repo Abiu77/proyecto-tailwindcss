@@ -8,6 +8,9 @@ module.exports = {
       spacing:{
         'quarter':'25%',
       },
+      colors:{
+        'dark-blue' : '#00f',
+      },
     },
   },
   plugins: [],
