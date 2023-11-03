@@ -6,9 +6,52 @@
   <title>Tailwind CSS</title>
   <link rel="stylesheet" href="./css/tailwind.css">
 </head>
+  <style>
+    body{
+      padding-left: 25%;
+      padding-right: 25%;
+      padding-top: 50px;
+    }
+
+    .panel{
+      border: 1px solid #00f;
+    }
+    .panel-title{
+      background-color: #00f;
+      color: #fff;
+      padding: 1.25rem 1rem 1.25rem 1rem;
+    }
+    .panel-body{
+      padding: 1.25rem 1rem 1.25rem 1rem;
+      text-indent: 30px;
+    }
+    .panel-body p{
+      line-height: 2rem;
+    }
+  </style>
 <body>
     
-  
+  <div class="panel">
+    <div class="panel-title">
+      Inicio - hecho con CSS
+    </div>
+    <div class="panel-body">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat veritatis nostrum dolor excepturi. Dicta quidem aliquam debitis reprehenderit molestiae laboriosam rem nobis, nostrum dolores voluptatem! At saepe perferendis consectetur. Impedit?
+      </p>
+    </div>
+  </div>
+  <br>
+  <div class="border border-blue-700">
+    <div class="bg-blue-700 text-white pl-4 pt-5 pb-5">
+      Inicio - hecho con Tailwind CSS
+    </div>
+    <div class="pl-4 pt-5 pb-5 pr-4">
+      <p class="leading-loose indent-8">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat veritatis nostrum dolor excepturi. Dicta quidem aliquam debitis reprehenderit molestiae laboriosam rem nobis, nostrum dolores voluptatem! At saepe perferendis consectetur. Impedit?
+      </p>
+    </div>
+  </div>
 
 </body>
 </html>
