@@ -5,20 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tailwind CSS</title>
   <link rel="stylesheet" href="./css/tailwind.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
-    
-  <div class="panel">
-    <div class="panel-title">
-      Inicio
+    <div id="app">
+      
+      <panel>
+        <template v-slot:title>Inicio</template>
+        <template v-slot:body>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat veritatis nostrum dolor excepturi. Dicta quidem aliquam debitis reprehenderit molestiae laboriosam rem nobis, nostrum dolores voluptatem! At saepe perferendis consectetur. Impedit?
+          </p>
+          <a class="btn-primary " href="contact.html">Contacto</a>
+        </template>
+      </panel>
+      
+      <panel>
+        <template v-slot:title>Acerca de nosotros</template>
+        <template v-slot:body>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat veritatis nostrum dolor excepturi. Dicta quidem aliquam debitis reprehenderit molestiae laboriosam rem nobis, nostrum dolores voluptatem! At saepe perferendis consectetur. Impedit?
+          </p>
+          <a class="btn-primary" href="contact.html">Contacto</a>
+        </template>
+      </panel>
     </div>
-    <div class="panel-body">
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat veritatis nostrum dolor excepturi. Dicta quidem aliquam debitis reprehenderit molestiae laboriosam rem nobis, nostrum dolores voluptatem! At saepe perferendis consectetur. Impedit?
-      </p>
-      <a class="btn-primary" href="contact.html">Contacto</a>
-    </div>
-  </div>
+
+  <script>
+    Vue.component('panel', {
+      template: `
+          <div class="panel mb-9">
+              <div class="panel-title">
+                <slot name="title"></slot>
+              </div>
+              <div class="panel-body">
+                <slot name="body"></slot>
+              </div>
+          </div>
+      `
+    });
+
+    new Vue({
+      el: '#app'
+    })
+  </script>
 
 </body>
 </html>
